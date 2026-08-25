@@ -8,7 +8,11 @@ export function Footer({ onOpenModal }) {
   return (
     <footer id="contacto">
       <div className="wrap">
-        <h2>Ponte en contacto con SitClass</h2>
+        <div className="footer-brand-header">
+          <img src="/logo-sitclass.png" alt="SitClass Logo" className="footer-logo-img" />
+          <h2>Ponte en contacto con SitClass</h2>
+        </div>
+
         <p className="tag">
           Escríbenos por WhatsApp o llámanos directamente al <strong>{phoneDisplay}</strong> para solicitar informes o tu Placement Test sin costo.
         </p>
@@ -34,7 +38,10 @@ export function Footer({ onOpenModal }) {
         </div>
 
         <div className="foot-bottom">
-          <span>SitClass — Explore, Experience and Enjoy English</span>
+          <div className="foot-brand-line">
+            <img src="/logo-sitclass.png" alt="SitClass" className="foot-mini-logo" />
+            <span>SitClass — Explore, Experience and Enjoy English</span>
+          </div>
           <span>Registro STPS CCB200703QF6-0013 · Red CONOCER CE0028-ECE364-18</span>
         </div>
       </div>

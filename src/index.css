@@ -12,6 +12,11 @@
   --shadow: 0 18px 40px -18px rgba(46, 26, 71, 0.35);
   --radius: 18px;
   --maxw: 1180px;
+
+  /* Font Families */
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 * {
@@ -26,20 +31,20 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Fraunces', serif;
+  font-family: var(--font-heading);
   color: var(--purple-deep);
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .mono {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: var(--font-mono);
 }
 
 a {
@@ -78,10 +83,10 @@ section.alt {
 }
 
 .sec-num {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: var(--font-mono);
   color: var(--yellow-deep);
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   display: block;
@@ -89,15 +94,15 @@ section.alt {
 }
 
 .sec-head h2 {
-  font-size: clamp(1.6rem, 3.4vw, 2.3rem);
-  font-weight: 700;
+  font-size: clamp(1.75rem, 3.8vw, 2.5rem);
+  font-weight: 800;
 }
 
 .sec-head p {
   color: #4A3A61;
   margin-top: 12px;
   line-height: 1.65;
-  font-size: 0.99rem;
+  font-size: 1rem;
 }
 
 /* Scroll Reveal Animations */
@@ -126,8 +131,9 @@ section.alt {
   gap: 8px;
   padding: 13px 22px;
   border-radius: 12px;
+  font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   text-decoration: none;
   border: 1px solid transparent;
   cursor: pointer;
@@ -204,6 +210,7 @@ section.alt {
 /* Floating Eyebrow Badge Animation */
 .eyebrow {
   animation: float 4s ease-in-out infinite;
+  font-family: var(--font-mono);
 }
 
 /* Responsive Overrides */

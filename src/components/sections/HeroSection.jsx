@@ -8,7 +8,11 @@ export function HeroSection({ levels, onSelectLevel, onOpenModal }) {
   return (
     <section className="hero">
       <div className="wrap">
-        <span className="eyebrow">● Catálogo oficial de servicios académicos</span>
+        <div className="hero-top-badge">
+          <img src="/logo-sitclass.png" alt="SitClass" className="hero-logo-badge" />
+          <span className="eyebrow">● Catálogo oficial de servicios académicos</span>
+        </div>
+
         <h1>
           Explore, Experience <em>and Enjoy</em> English.
         </h1>

@@ -25,7 +25,8 @@ export function Navbar({ activeSection, onOpenModal }) {
     <header className={`topnav ${isOpen ? 'open' : ''}`} id="topnav">
       <div className="wrap">
         <div className="brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <span className="mark">SC</span> SitClass
+          <img src="/logo-sitclass.png" alt="SitClass Logo" className="brand-img-logo" />
+          <span className="brand-text">SitClass</span>
         </div>
 
         <button
