@@ -3,6 +3,7 @@ import './Navbar.css';
 
 export function Navbar({ activeSection, onOpenModal }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   const navLinks = [
     { href: '#propuesta', label: 'Metodología' },
@@ -25,7 +26,16 @@ export function Navbar({ activeSection, onOpenModal }) {
     <header className={`topnav ${isOpen ? 'open' : ''}`} id="topnav">
       <div className="wrap">
         <div className="brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img src="/logo-sitclass.png" alt="SitClass Logo" className="brand-img-logo" />
+          {!imgError ? (
+            <img
+              src="./public/logo.sitclass.png"
+              alt="SitClass Logo"
+              className="brand-img-logo"
+              onError={() => setImgError(true)}
+            />
+          ) : (
+            <span className="mark">SC</span>
+          )}
           <span className="brand-text">SitClass</span>
         </div>
 

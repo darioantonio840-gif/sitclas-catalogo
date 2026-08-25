@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 
 export function Footer({ onOpenModal }) {
+  const [imgError, setImgError] = useState(false);
   const phoneDisplay = "+52 (55) 3943-1120";
   const whatsappUrl = "https://wa.me/525539431120?text=Hola%20SitClass,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20agendar%20un%20Placement%20Test.";
 
@@ -9,7 +10,14 @@ export function Footer({ onOpenModal }) {
     <footer id="contacto">
       <div className="wrap">
         <div className="footer-brand-header">
-          <img src="/logo-sitclass.png" alt="SitClass Logo" className="footer-logo-img" />
+          {!imgError && (
+            <img
+              src="/logo-sitclass.png"
+              alt="SitClass Logo"
+              className="footer-logo-img"
+              onError={() => setImgError(true)}
+            />
+          )}
           <h2>Ponte en contacto con SitClass</h2>
         </div>
 
@@ -39,7 +47,9 @@ export function Footer({ onOpenModal }) {
 
         <div className="foot-bottom">
           <div className="foot-brand-line">
-            <img src="/logo-sitclass.png" alt="SitClass" className="foot-mini-logo" />
+            {!imgError && (
+              <img src="/logo-sitclass.png" alt="SitClass" className="foot-mini-logo" />
+            )}
             <span>SitClass — Explore, Experience and Enjoy English</span>
           </div>
           <span>Registro STPS CCB200703QF6-0013 · Red CONOCER CE0028-ECE364-18</span>

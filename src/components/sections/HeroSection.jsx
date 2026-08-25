@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LadderVisualizer } from '../ui/LadderVisualizer';
 import './HeroSection.css';
 
 export function HeroSection({ levels, onSelectLevel, onOpenModal }) {
+  const [imgError, setImgError] = useState(false);
   const whatsappUrl = "https://wa.me/525539431120?text=Hola%20SitClass,%20me%20gustar%C3%ADa%20solicitar%20un%20Placement%20Test%20sin%20costo.";
 
   return (
     <section className="hero">
       <div className="wrap">
         <div className="hero-top-badge">
-          <img src="/logo-sitclass.png" alt="SitClass" className="hero-logo-badge" />
+          {!imgError && (
+            <img
+              src="/logo-sitclass.png"
+              alt="SitClass"
+              className="hero-logo-badge"
+              onError={() => setImgError(true)}
+            />
+          )}
           <span className="eyebrow">● Catálogo oficial de servicios académicos</span>
         </div>
 

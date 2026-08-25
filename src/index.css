@@ -13,9 +13,10 @@
   --radius: 18px;
   --maxw: 1180px;
 
-  /* Font Families */
+  /* Brand Typography */
   --font-body: 'Plus Jakarta Sans', sans-serif;
-  --font-heading: 'Outfit', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-brand: 'Sora', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 
@@ -40,7 +41,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading);
   color: var(--purple-deep);
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .mono {

@@ -22,7 +22,7 @@ export function PlacementModal({ isOpen, onClose }) {
           <span className="eyebrow">Atención Inmediata por WhatsApp</span>
           <h3>Contacto Directo SitClass</h3>
           <p>
-            Sin formularios ni registros de bases de datos. Escríbenos o llámanos directamente al <strong>{phoneDisplay}</strong> para agendar tu Placement Test sin costo.
+           Escríbenos o llámanos directamente al <strong>{phoneDisplay}</strong> para agendar tu Placement Test.
           </p>
         </div>
 
