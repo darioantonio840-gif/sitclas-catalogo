@@ -1,0 +1,150 @@
+header.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(251, 249, 253, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.topnav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--purple-deep);
+  cursor: pointer;
+}
+
+.brand .mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: linear-gradient(145deg, var(--purple), var(--purple-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--yellow);
+  font-weight: 800;
+  font-size: 0.85rem;
+  font-family: 'IBM Plex Mono', monospace;
+  box-shadow: 0 6px 14px -6px rgba(46, 26, 71, 0.6);
+}
+
+nav.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+nav.links::-webkit-scrollbar {
+  display: none;
+}
+
+nav.links a {
+  white-space: nowrap;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--purple);
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+nav.links a:hover {
+  background: var(--purple-soft);
+}
+
+nav.links a.active {
+  background: var(--purple-deep);
+  color: var(--white);
+}
+
+.nav-cta-btn {
+  margin-left: 8px;
+  background: var(--yellow);
+  color: var(--purple-deep);
+  border: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s ease;
+}
+
+.nav-cta-btn:hover {
+  transform: scale(1.04);
+}
+
+.navtoggle {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  nav.links a {
+    padding: 6px 10px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 640px) {
+  nav.links {
+    display: none;
+  }
+
+  .navtoggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: var(--white);
+    font-size: 1.1rem;
+    color: var(--purple-deep);
+    cursor: pointer;
+  }
+
+  header.topnav.open nav.links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 16px 24px 24px;
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    gap: 8px;
+  }
+
+  header.topnav.open nav.links a {
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+
+  header.topnav.open .nav-cta-btn {
+    margin-left: 0;
+    margin-top: 6px;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+  }
+}

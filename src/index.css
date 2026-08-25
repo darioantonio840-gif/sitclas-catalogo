@@ -1,0 +1,234 @@
+:root {
+  --purple-deep: #2E1A47;
+  --purple: #5B2A86;
+  --purple-mid: #7B4BAA;
+  --purple-soft: #EFE6F7;
+  --yellow: #FFC93C;
+  --yellow-deep: #F0A500;
+  --white: #FFFFFF;
+  --ink: #241535;
+  --paper: #FBF9FD;
+  --line: rgba(46, 26, 71, 0.12);
+  --shadow: 0 18px 40px -18px rgba(46, 26, 71, 0.35);
+  --radius: 18px;
+  --maxw: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', serif;
+  color: var(--purple-deep);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--purple-deep);
+}
+
+/* Base Sections */
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+section.alt {
+  background: var(--purple-soft);
+}
+
+.sec-head {
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.sec-num {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--yellow-deep);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sec-head h2 {
+  font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+  font-weight: 700;
+}
+
+.sec-head p {
+  color: #4A3A61;
+  margin-top: 12px;
+  line-height: 1.65;
+  font-size: 0.99rem;
+}
+
+/* Scroll Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay classes */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* Buttons & Interactive Elements */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+.btn-yellow {
+  background: var(--yellow);
+  color: var(--purple-deep);
+  box-shadow: 0 12px 24px -10px rgba(240, 165, 0, 0.6);
+}
+
+.btn-yellow:hover {
+  background: var(--yellow-deep);
+  box-shadow: 0 16px 30px -8px rgba(240, 165, 0, 0.75);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+/* Dynamic Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Floating Eyebrow Badge Animation */
+.eyebrow {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Responsive Overrides */
+@media (max-width: 980px) {
+  section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 52px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

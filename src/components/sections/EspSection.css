@@ -1,0 +1,140 @@
+.esp-search-bar {
+  margin-bottom: 24px;
+}
+
+.esp-search-input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1.5px solid var(--line);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.94rem;
+  background: var(--white);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.esp-search-input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(91, 42, 134, 0.12);
+}
+
+.esp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.esp-empty {
+  padding: 30px;
+  text-align: center;
+  background: var(--white);
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  color: #5A4A70;
+  font-size: 0.92rem;
+}
+
+.esp-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.esp-item.is-open {
+  border-color: rgba(91, 42, 134, 0.3);
+  box-shadow: var(--shadow);
+}
+
+.esp-item .summary {
+  cursor: pointer;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  user-select: none;
+}
+
+.esp-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.esp-item .summary .left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.esp-item .summary .num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  color: var(--yellow-deep);
+  font-size: 0.85rem;
+  min-width: 26px;
+}
+
+.esp-item .summary h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.esp-item .summary .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.esp-item .summary .hrs {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.76rem;
+  color: var(--purple);
+  background: var(--purple-soft);
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.esp-item .summary .chev {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--purple);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--purple);
+  transition: transform 0.2s ease;
+}
+
+.esp-item .body {
+  padding: 0 20px 20px 60px;
+  animation: fade 0.2s ease;
+}
+
+.esp-item .body p {
+  color: #5A4A70;
+  margin: 0 0 10px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.esp-item ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #4A3A61;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .esp-item .body {
+    padding-left: 20px;
+  }
+}

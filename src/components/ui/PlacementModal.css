@@ -1,0 +1,115 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(36, 21, 53, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 480px;
+  padding: 36px 30px;
+  position: relative;
+  box-shadow: 0 28px 56px rgba(46, 26, 71, 0.45);
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--purple-deep);
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.modal-close:hover {
+  background: var(--purple-soft);
+}
+
+.modal-header .eyebrow {
+  background: var(--purple-soft);
+  color: var(--purple-deep);
+  border-color: rgba(91, 42, 134, 0.2);
+  margin-bottom: 12px;
+}
+
+.modal-header h3 {
+  font-size: 1.65rem;
+  margin-top: 6px;
+  color: var(--purple-deep);
+}
+
+.modal-header p {
+  color: #5A4A70;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  margin-bottom: 26px;
+}
+
+.modal-actions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 15px 20px;
+  border-radius: 14px;
+  justify-content: center;
+  box-shadow: 0 10px 20px -6px rgba(37, 211, 102, 0.5);
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  box-shadow: 0 14px 24px -4px rgba(37, 211, 102, 0.7);
+  color: #ffffff;
+}
+
+.wa-icon, .phone-icon {
+  font-size: 1.2rem;
+}
+
+.btn-phone {
+  background: var(--purple-deep);
+  color: var(--yellow);
+  font-size: 0.95rem;
+  padding: 14px 20px;
+  border-radius: 14px;
+  justify-content: center;
+  border: 1px solid rgba(255, 201, 60, 0.3);
+}
+
+.btn-phone:hover {
+  background: var(--purple);
+  color: var(--yellow);
+}
+
+.modal-footer-note {
+  margin-top: 22px;
+  font-size: 0.78rem;
+  color: #7A6993;
+  font-family: 'IBM Plex Mono', monospace;
+}

@@ -1,0 +1,77 @@
+.cert-scroll {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 250px;
+  gap: 16px;
+}
+
+.cert-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.cert-card .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cert-card h4 {
+  font-size: 1.05rem;
+}
+
+.cert-card .lvl-pill {
+  background: var(--purple-deep);
+  color: var(--yellow);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.cert-card .hrs-line {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--yellow-deep);
+  font-weight: 700;
+}
+
+.cert-card p {
+  font-size: 0.85rem;
+  color: #5A4A70;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cert-card .mods {
+  font-size: 0.76rem;
+  color: var(--purple);
+  border-top: 1px dashed var(--line);
+  padding-top: 10px;
+  margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .cert-grid {
+    grid-auto-columns: 82%;
+  }
+}
