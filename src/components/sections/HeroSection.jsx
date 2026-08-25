@@ -9,14 +9,16 @@ export function HeroSection({ levels, onSelectLevel, onOpenModal }) {
   return (
     <section className="hero">
       <div className="wrap">
-        <div className="hero-top-badge">
+        <div className="hero-brand-card">
           {!imgError && (
-            <img
-              src="/logo-sitclass.png"
-              alt="SitClass"
-              className="hero-logo-badge"
-              onError={() => setImgError(true)}
-            />
+            <div className="hero-logo-box">
+              <img
+                src="/logo-sitclass.png"
+                alt="SitClass Logo Oficial"
+                className="hero-logo-img"
+                onError={() => setImgError(true)}
+              />
+            </div>
           )}
           <span className="eyebrow">● Catálogo oficial de servicios académicos</span>
         </div>

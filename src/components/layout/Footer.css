@@ -20,41 +20,40 @@ footer .wrap {
 
 .footer-brand-header {
   display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.footer-logo-card {
+  background: #ffffff;
+  padding: 10px 18px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+  display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 12px;
+  justify-content: center;
 }
 
 .footer-logo-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  height: 52px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
 }
 
 footer h2 {
   color: var(--white);
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-family: var(--font-heading);
   margin: 0;
 }
 
-.foot-brand-line {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.foot-mini-logo {
-  width: 22px;
-  height: 22px;
-  border-radius: 6px;
-}
-
 footer p.tag {
-  color: rgba(255, 255, 255, 0.72);
-  margin-top: 10px;
-  max-width: 480px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-top: 8px;
+  max-width: 540px;
   font-size: 0.96rem;
   line-height: 1.6;
 }
@@ -104,7 +103,7 @@ footer p.tag {
 
 .contact-pill .lbl {
   color: var(--yellow);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -116,8 +115,31 @@ footer p.tag {
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  font-size: 0.76rem;
-  color: rgba(255, 255, 255, 0.5);
+  gap: 12px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.foot-brand-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.foot-mini-logo {
+  height: 26px;
+  width: auto;
+  background: #ffffff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .footer-brand-header {
+    flex-direction: column;
+    gap: 16px;
+  }
 }

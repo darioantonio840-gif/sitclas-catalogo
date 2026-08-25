@@ -27,16 +27,17 @@ export function Navbar({ activeSection, onOpenModal }) {
       <div className="wrap">
         <div className="brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           {!imgError ? (
-            <img
-              src="./public/logo.sitclass.png"
-              alt="SitClass Logo"
-              className="brand-img-logo"
-              onError={() => setImgError(true)}
-            />
+            <div className="brand-logo-container">
+              <img
+                src="/logo-sitclass.png"
+                alt="SitClass — Explore, Experience and Enjoy English"
+                className="brand-full-logo"
+                onError={() => setImgError(true)}
+              />
+            </div>
           ) : (
-            <span className="mark">SC</span>
+            <span className="mark">SC SitClass</span>
           )}
-          <span className="brand-text">SitClass</span>
         </div>
 
         <button

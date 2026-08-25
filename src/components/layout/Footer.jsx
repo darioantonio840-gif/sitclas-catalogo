@@ -11,19 +11,22 @@ export function Footer({ onOpenModal }) {
       <div className="wrap">
         <div className="footer-brand-header">
           {!imgError && (
-            <img
-              src="/logo-sitclass.png"
-              alt="SitClass Logo"
-              className="footer-logo-img"
-              onError={() => setImgError(true)}
-            />
+            <div className="footer-logo-card">
+              <img
+                src="/logo-sitclass.png"
+                alt="SitClass Logo Oficial"
+                className="footer-logo-img"
+                onError={() => setImgError(true)}
+              />
+            </div>
           )}
-          <h2>Ponte en contacto con SitClass</h2>
+          <div>
+            <h2>Ponte en contacto con SitClass</h2>
+            <p className="tag">
+              Escríbenos por WhatsApp o llámanos directamente al <strong>{phoneDisplay}</strong> para solicitar informes o tu Placement Test sin costo.
+            </p>
+          </div>
         </div>
-
-        <p className="tag">
-          Escríbenos por WhatsApp o llámanos directamente al <strong>{phoneDisplay}</strong> para solicitar informes o tu Placement Test sin costo.
-        </p>
 
         <div className="contact-row">
           <a
